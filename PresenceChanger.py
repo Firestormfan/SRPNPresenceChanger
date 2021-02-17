@@ -20,8 +20,6 @@ RPC = Presence(client_id)
 
 Keys = start + button
 
-print(Keys)
-
 if Keys == "FalseFalse":
     while True:
         RPC.connect()
