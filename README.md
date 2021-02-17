@@ -14,13 +14,14 @@
 
 # config.jsonの設定
 
-__client_id__ Client idを入れる  
-__details__   今行っていることを表示する(残り100人 とかのあれ)  
-__state__     detailsとの違いがわからない  
-__start__     `True` か `False`と入力する Trueにするとプレイ時間が表示される  
+__client_id__   Client idを入れる  
+__details__     今行っていることを表示する(残り100人 とかのあれ)  
+__state__       detailsとの違いがわからない  
+__start__       `True` か `False`と入力する Trueにするとプレイ時間が表示される  
 __large_image__ Developer Portalで設定した Rich Presence Assetsの名前を書く  
-__large_text__ large_imageにカーソルを合わせたときに表示する文字を書く  
-__button__ ボタンを表示したいときに使う 好きな文字を入れる __作者の力不足でボタンをTrueにしないと起動できません pythonもうちょい出来るようになってから直します__  
-__buttonURL__ ボタンを押したときに飛ぶサイトを決める  
+__large_text__  large_imageにカーソルを合わせたときに表示する文字を書く  
+__button__      `True` か `False`と入力する Trueにするとボタンを表示できる  
+__buttonname__  ボタンを表示したいときに使う 好きな文字を入れる __~~作者の力不足でボタンをTrueにしないと起動できません~~ 修正されました！__  
+__buttonURL__   ボタンを押したときに飛ぶサイトを決める  
 
 わからないことがあったらDiscord てぃーすぴん#3939 または Twitter @BrightNoahBにDMしてください
