@@ -1,11 +1,11 @@
 {
     "client_id": 1145141919810,
-    "details":"好きな文字を入れてね",
-    "state":"好きな文字を入れてね",
-    "start":"True",
-    "large_image":"none",
-    "large_text":"none",
-    "button":"False",
-    "buttonname":"Google",
-    "buttonURL":"https://google.com"
+    "details": "好きな文字を入れてね",
+    "state": "好きな文字を入れてね",
+    "start": true,
+    "large_image": null,
+    "large_text": null,
+    "button": false,
+    "button_name": "Google",
+    "button_url": "https://google.com"
 }

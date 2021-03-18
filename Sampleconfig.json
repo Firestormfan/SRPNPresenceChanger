@@ -1,11 +1,11 @@
 {
     "client_id": 811183646362042390,
-    "details":"Windows NMを使用中",
-    "state":"性能は最悪です",
-    "start":"True",
-    "large_image":"preee",
-    "large_text":"ここのこと",
-    "button":"False",
-    "buttonname":"TETR.IO",
-    "buttonURL":"https://tetr.io"
+    "details": "Windows NMを使用中",
+    "state": "性能は最悪です",
+    "start": true,
+    "large_image": "preee",
+    "large_text": "ここのこと",
+    "button": false,
+    "button_name": "TETR.IO",
+    "button_url": "https://tetr.io"
 }
