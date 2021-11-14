@@ -1,45 +1,31 @@
-import pypresence
-from pypresence import Presence
-import time
 import json
+import time
 
-json_file = open('config.json','r',encoding='utf-8')
-json_data = json.load(json_file)
+from pypresence import Presence
 
-client_id = json_data["client_id"]
-state = json_data["state"]
-details = json_data["details"]
-start = json_data["start"]
-large = json_data["large_image"]
-largetxt = json_data["large_text"]
-button = json_data["button"]
-buttonname = json_data["buttonname"]
-buttonurl = json_data["buttonURL"]
+with open('config.json', 'r', encoding='utf-8') as f:
+    json_data = json.load(f)
 
-RPC = Presence(client_id)
+RPC = Presence(str(json_data['client_id']))
+RPC.connect()
+print('Rich Presenceに接続しました！リッチなDiscordを楽しんで！')
 
-Keys = start + button
+RPC.update(
+    start=time.time() if json_data['start'] else None,
+    state=json_data['state'],
+    details=json_data['details'],
+    large_image=json_data['large_image'],
+    large_text=json_data['large_text'],
+    buttons=[
+        {
+            'label': json_data['button_name'],
+            'url': json_data['button_url']
+        }
+    ] if json_data['button'] else None
+)
 
-if Keys == "FalseFalse":
+try:
     while True:
-        RPC.connect()
-        print("Rich Presenceに接続しました！リッチなDiscordを楽しんで！")
-        RPC.update(state=(state),details=(details),large_image=(large),large_text=(largetxt))
-
-elif Keys == "FalseTrue":
-    while True:
-        RPC.connect()
-        print("Rich Presenceに接続しました！リッチなDiscordを楽しんで！")
-        RPC.update(state=(state),details=(details),large_image=(large),large_text=(largetxt),buttons=[{"label": buttonname, "url": buttonurl}])
-
-elif Keys == "TrueTrue":
-    while True:
-        RPC.connect()
-        print("Rich Presenceに接続しました！リッチなDiscordを楽しんで！")
-        RPC.update(start=(time.time()),state=(state),details=(details),large_image=(large),large_text=(largetxt),buttons=[{"label": buttonname, "url": buttonurl}])
-
-elif Keys == "TrueFalse":
-    while True:
-        RPC.connect()
-        print("Rich Presenceに接続しました！リッチなDiscordを楽しんで！")
-        RPC.update(start=(time.time()),state=(state),details=(details),large_image=(large),large_text=(largetxt))
+        time.sleep(15)
+except KeyboardInterrupt:
+    RPC.close()
